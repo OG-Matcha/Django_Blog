@@ -8,4 +8,5 @@ def index(request):
 
 def post(request, pk):
     posts = Posts.objects.get(id=pk)
-    return render(request, 'posts.html', {'posts':posts})
+    texts = posts.body.split('  ')
+    return render(request, 'posts.html', {'posts':posts, 'texts':texts})

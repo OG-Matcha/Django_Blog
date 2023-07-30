@@ -64,7 +64,9 @@
                 <div class="card">
                     <h1>{{posts.title}}</h1>
                     <h5>{{posts.created_at}}</h5>
-                    <p>{{posts.body}}</p>
+                    {% for text in texts %}
+                    <p>{{text}}</p>
+                    {% endfor %}
                 </div>
             </div>
         </div>
